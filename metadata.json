@@ -1,5 +1,5 @@
 {
-  "name": "SciScan AI",
-  "description": "Uma ferramenta avançada para análise profunda de artigos científicos utilizando IA generativa. Faça upload de PDFs ou insira resumos para obter insights estruturados.",
+  "name": "artigo.cafe",
+  "description": "Sua dose de ciência destilada. Uma ferramenta elegante para análise de artigos científicos.",
   "requestFramePermissions": []
 }

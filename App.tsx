@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { PaperClipIcon, FileIcon, BeakerIcon, TrashIcon, HistoryIcon, XMarkIcon } from './components/Icons';
+import { PaperClipIcon, FileIcon, CoffeeIcon, TrashIcon, HistoryIcon, XMarkIcon } from './components/Icons';
 import { analyzeArticle } from './services/gemini';
 import { AnalysisResult } from './components/AnalysisResult';
 import { AnalysisSchema, LoadingStatus } from './types';
@@ -123,14 +123,14 @@ const App: React.FC = () => {
             <div className="absolute inset-0 rounded-full border-[3px] border-stone-100"></div>
             <div className="absolute inset-0 rounded-full border-[3px] border-[#0f172a] border-t-transparent animate-spin"></div>
             <div className="absolute inset-0 flex items-center justify-center text-[#0f172a]">
-               <BeakerIcon />
+               <CoffeeIcon />
             </div>
           </div>
           <h2 className="text-3xl font-serif font-bold text-[#0f172a] mb-3">
-            {status === 'reading' ? 'Lendo Dados...' : 'Analisando Impacto...'}
+            {status === 'reading' ? 'Passando o café...' : 'Destilando conhecimento...'}
           </h2>
           <p className="text-stone-500 font-light leading-relaxed">
-            Nossa IA está traduzindo, simplificando e avaliando rigor metodológico.
+            Estamos lendo, traduzindo e simplificando tudo para você.
           </p>
         </div>
       </div>
@@ -156,15 +156,15 @@ const App: React.FC = () => {
       
       {/* Header */}
       <div className="text-center mb-12">
-        <div className="inline-flex items-center justify-center p-4 bg-[#0f172a] text-white rounded-full mb-6 shadow-xl shadow-stone-200">
-           <BeakerIcon /> 
+        <div className="inline-flex items-center justify-center p-4 bg-[#0f172a] text-white rounded-full mb-6 shadow-xl shadow-stone-200 ring-4 ring-stone-100">
+           <CoffeeIcon /> 
         </div>
         <h1 className="text-5xl md:text-6xl font-bold text-[#0f172a] mb-4 tracking-tight">
-          SciScan <span className="italic font-serif text-[#b45309]">AI</span>
+          artigo<span className="italic font-serif text-[#b45309]">.cafe</span>
         </h1>
         <p className="text-stone-500 max-w-lg mx-auto font-light leading-relaxed">
-          Cole um link, resumo ou anexe um PDF. <br/>
-          Nós dissecamos a ciência para você.
+          Relaxe. Cole um link ou anexe um PDF. <br/>
+          Sua dose diária de ciência, sem a complexidade.
         </p>
       </div>
 
@@ -173,7 +173,7 @@ const App: React.FC = () => {
         
         <textarea
           className="w-full h-32 px-6 py-6 bg-transparent border-none focus:ring-0 text-lg text-stone-700 placeholder-stone-400 resize-none leading-relaxed"
-          placeholder="O que vamos analisar hoje? Cole um link DOI, PubMed ou texto..."
+          placeholder="Qual artigo vamos degustar hoje? Cole um link DOI ou texto..."
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
           autoFocus
@@ -242,7 +242,7 @@ const App: React.FC = () => {
         <div className="w-full max-w-2xl mt-12 animate-fade-in">
           <h3 className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-stone-400 mb-4 px-2">
             <HistoryIcon />
-            Histórico de Análises
+            Histórico de Leitura
           </h3>
           <div className="grid gap-3 w-full">
             {history.map((item) => (
@@ -279,8 +279,9 @@ const App: React.FC = () => {
         </div>
       )}
 
-      <div className="mt-auto pt-10 text-stone-300 text-xs">
-         © 2024 SciScan AI
+      <div className="mt-auto pt-10 text-stone-300 text-xs flex flex-col items-center gap-1">
+         <span className="font-serif italic text-stone-400">artigo.cafe</span>
+         <span>© 2024</span>
       </div>
 
     </div>
