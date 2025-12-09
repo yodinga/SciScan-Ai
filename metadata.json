@@ -1,0 +1,5 @@
+{
+  "name": "SciScan AI",
+  "description": "Uma ferramenta avançada para análise profunda de artigos científicos utilizando IA generativa. Faça upload de PDFs ou insira resumos para obter insights estruturados.",
+  "requestFramePermissions": []
+}
